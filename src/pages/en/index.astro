@@ -1,70 +1,144 @@
 ---
 import Base from "../../layouts/base.astro";
+
 const title = "INFUSION — Your vision, accelerated by AI — fast.";
-const description = "From branding to front-end architecture, we go beyond design to become your strategic growth partner, building websites that scale with you.";
+const description =
+  "From branding to front-end architecture, we go beyond design to become your strategic growth partner, building websites that scale with you.";
 ---
 <Base {title} {description}>
-  <div class="wrap">
-    <header class="nav">
-      <div class="brand">
-        <img src="/brand/infusion-logo.webp" alt="INFUSION" height="28" />
-        <strong>INFUSION</strong>
-      </div>
-      <nav class="navlinks">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <!-- Header -->
+  <header class="nav wrap">
+    <div class="brand">
+      <img src="/brand/infusion-warp.webp" alt="INFUSION icon" />
+      <strong>INFUSION</strong>
+    </div>
 
-    <section class="hero">
-      <div class="left">
-        <span class="badge">AI-first • Astro + Vercel • Fast</span>
-        <h1>Your vision, accelerated by AI — fast.</h1>
-        <p>From branding to front-end architecture, we go beyond design to become your strategic growth partner, building websites that scale with you.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#contact">Get started</a>
-          <a class="btn btn-ghost" href="#work">View our work</a>
-        </div>
-      </div>
-      <div class="right">
-        <div class="mock card">
-          <!-- Replace with real hero visual -->
-          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#00E0E6"/>
-                <stop offset="100%" stop-color="#1378FF"/>
-              </linearGradient>
-            </defs>
-            <path d="M100 20c44 0 80 36 80 80s-36 80-80 80S20 144 20 100" stroke="url(#g)" stroke-width="14" stroke-linecap="round" fill="none"/>
-            <path d="M100 45c30 0 55 25 55 55s-25 55-55 55-55-25-55-55" stroke="url(#g)" stroke-width="10" stroke-linecap="round" fill="none"/>
-            <circle cx="100" cy="100" r="8" fill="#fff" opacity=".9"/>
-          </svg>
-        </div>
-      </div>
-    </section>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section id="services" class="wrap">
-      <div class="grid-3">
-        <div class="card">
-          <h3>Brand Systems</h3>
-          <p>Logo, color, and typography packages built for scale.</p>
-        </div>
-        <div class="card">
-          <h3>AI Web Architecture</h3>
-          <p>Astro + Vercel websites, lightning fast, SEO-ready, and easy to manage.</p>
-        </div>
-        <div class="card">
-          <h3>Strategic Growth Layer</h3>
-          <p>Automation, CRM integration, and AI tools that work quietly in the background.</p>
-        </div>
+  <!-- Hero -->
+  <section id="home" class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <span class="badge">AI-first • Astro + Vercel • Fast</span>
+      <h1 id="hero-title">Your vision, accelerated by AI — fast.</h1>
+      <p>
+        From branding to front-end architecture, we go beyond design to
+        become your strategic growth partner, building websites that scale
+        with you.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Get started</a>
+        <a class="btn btn-secondary" href="#work">View our work</a>
       </div>
-    </section>
+    </div>
 
-    <footer style="opacity:.7; padding:40px 0;">
-      <small>© {new Date().getFullYear()} INFUSION. All rights reserved.</small>
-    </footer>
-  </div>
+    <div class="hero-visual">
+      <div class="mock">
+        <img src="/brand/infusion-warp.webp" alt="Infusion warp visual" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section wrap">
+    <div class="grid-3">
+      <div class="card">
+        <h3>Brand Systems</h3>
+        <p>Logo, color, and typography packages built for scale.</p>
+      </div>
+      <div class="card">
+        <h3>AI Web Architecture</h3>
+        <p>Astro + Vercel websites, lightning fast, SEO‑ready, and easy to manage.</p>
+      </div>
+      <div class="card">
+        <h3>Strategic Growth Layer</h3>
+        <p>Automation, CRM integration, and AI tools that work quietly in the background.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARP Pricing -->
+  <section id="warp" class="section wrap" aria-labelledby="warp-title">
+    <h2 id="warp-title" style="margin:0 0 24px;">W.A.R.P. — Web Architecture Retainer Plan</h2>
+    <p style="color:var(--muted);max-width:60ch;margin:0 0 28px;">
+      Launch fast, stay fast. We maintain your site’s speed, security, and growth with an AI‑first stack.
+    </p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Esencial (LATAM)</h3>
+        <div class="price">$500 <span>setup</span> · $90 <span>/mo</span></div>
+        <ul class="features">
+          <li>Astro + Vercel hosting setup</li>
+          <li>Monthly performance checks</li>
+          <li>Basic analytics & SEO</li>
+          <li>Email support</li>
+        </ul>
+        <div class="divider"></div>
+        <a class="btn btn-primary" href="#contact">Get started</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="pill">Most popular</div>
+        <h3>Core (US/EU)</h3>
+        <div class="price">$1,000 <span>setup</span> · $600 <span>/mo</span></div>
+        <ul class="features">
+          <li>Everything in Esencial</li>
+          <li>Component updates & A/B tests</li>
+          <li>Security patches & backups</li>
+          <li>Priority support (48h)</li>
+        </ul>
+        <div class="divider"></div>
+        <a class="btn btn-primary" href="#contact">Book a Warp Session</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Growth</h3>
+        <div class="price">$1,500 <span>setup</span> · $850 <span>/mo</span></div>
+        <ul class="features">
+          <li>Everything in Core</li>
+          <li>Quarterly roadmap & experiments</li>
+          <li>CRM & automation integrations</li>
+          <li>Priority support (24h)</li>
+        </ul>
+        <div class="divider"></div>
+        <a class="btn btn-primary" href="#contact">Talk to us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="section wrap" aria-labelledby="work-title">
+    <h2 id="work-title" style="margin:0 0 16px;">Selected Work</h2>
+    <p style="color:var(--muted);max-width:60ch;margin:0;">
+      Case studies coming soon. Ask for the deck and we’ll send live examples.
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section wrap" aria-labelledby="about-title">
+    <h2 id="about-title" style="margin:0 0 16px;">About Infusion</h2>
+    <p style="color:var(--muted);max-width:60ch;margin:0;">
+      We’re an AI‑first studio shipping brand systems and websites in days, not months.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section wrap" aria-labelledby="contact-title">
+    <h2 id="contact-title" style="margin:0 0 16px;">Contact</h2>
+    <p style="color:var(--muted);max-width:60ch;">
+      Email us at <a href="mailto:hello@infusion.studio">hello@infusion.studio</a> or book a Warp Session.
+    </p>
+    <a class="btn btn-primary" href="mailto:hello@infusion.studio">Email us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="wrap" style="opacity:.7; padding:40px 0;">
+    <small>© {new Date().getFullYear()} INFUSION. All rights reserved.</small>
+  </footer>
 </Base>

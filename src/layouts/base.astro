@@ -1,37 +1,62 @@
 ---
-const { title = 'INFUSION — AI websites built to win, fast', description = 'We build AI-powered websites and brand systems that ship in days, not months.' } = Astro.props;
+const {
+  title = 'INFUSION — AI websites built to win, fast',
+  description = 'We build AI-powered websites and brand systems that ship in days, not months.',
+  ogImage = '/brand/og-image.webp', // raster for social cards
+  ogImageAlt = 'INFUSION warp spiral over gradient'
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
   <head>
-  <!-- Favicon & PWA Meta -->
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon/web-app-manifest-512x512.png">
-<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<meta name="msapplication-TileColor" content="#2A2D42">
-<meta name="theme-color" content="#2A2D42">
-
-<!-- PWA iOS Fullscreen -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- App capabilities -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="color-scheme" content="dark">
+
+    <!-- SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={Astro.url} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon & PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/web-app-manifest-512x512.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2A2D42">
+    <meta name="theme-color" content="#2A2D42">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <slot />
+    <script src="/scripts/nav-highlight.js" defer></script>
   </body>
 </html>
