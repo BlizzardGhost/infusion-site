@@ -45,7 +45,7 @@ const description =
   </section>
 
   <!-- Services -->
-  <section id="services" class="section wrap">
+  <section id="services" class="section alt wrap">
     <div class="grid-3">
       <div class="card">
         <h3>Brand Systems</h3>
@@ -114,11 +114,22 @@ const description =
 
   <!-- Work -->
   <section id="work" class="section wrap" aria-labelledby="work-title">
-    <h2 id="work-title" style="margin:0 0 16px;">Selected Work</h2>
-    <p style="color:var(--muted);max-width:60ch;margin:0;">
-      Case studies coming soon. Ask for the deck and we’ll send live examples.
-    </p>
-  </section>
+  <h2 id="work-title" style="margin:0 0 16px;">Selected Work</h2>
+  <div class="work-grid">
+    <a class="work-card" href="#contact" aria-label="Case Study 01 (request access)">
+      <img src="/brand/infusion-warp.webp" alt="Case Study cover" />
+      <div class="lock">Case Study • Access on request 🔒</div>
+    </a>
+    <a class="work-card" href="#contact" aria-label="Case Study 02 (request access)">
+      <img src="/brand/infusion-warp.webp" alt="Case Study cover" />
+      <div class="lock">Growth + A/B • Access on request 🔒</div>
+    </a>
+    <a class="work-card" href="#contact" aria-label="Case Study 03 (request access)">
+      <img src="/brand/infusion-warp.webp" alt="Case Study cover" />
+      <div class="lock">Brand System • Access on request 🔒</div>
+    </a>
+  </div>
+</section>
 
   <!-- About -->
   <section id="about" class="section wrap" aria-labelledby="about-title">
@@ -138,7 +149,7 @@ const description =
   </section>
 
   <!-- Footer -->
-  <footer class="wrap" style="opacity:.7; padding:40px 0;">
-    <small>© {new Date().getFullYear()} INFUSION. All rights reserved.</small>
-  </footer>
+<footer class="wrap site-footer">
+  <small id="footer-joke"></small>
+</footer>
 </Base>
